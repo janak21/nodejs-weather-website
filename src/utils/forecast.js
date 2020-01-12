@@ -1,7 +1,7 @@
 const request = require('request')
 
 const forecast = (latitude,longitude,callback)=>{
-    const url = 'https://api.darksky.net/forecast/3fa0709cbda90e76a1d32447469fa2d9/'+latitude+','+longitude+''
+    const url = 'https://api.darksky.net/forecast/3fa0709cbda90e76a1d32447469fa2d9/'+latitude+','+longitude+'?units=si'
     request({url, json:true},(error, { body})=>{
         if(error){
             callback('Unable to connect to weather service!',undefined)
